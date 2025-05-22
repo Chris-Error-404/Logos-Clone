@@ -62,7 +62,7 @@ body.light-mode .hero a {
   body.light-mode .sidebar a.active,
   body.light-mode .sidebar a:hover,
   body.light-mode .overlay-nav-items a.active,
-  body {
+  body.light-mode .overlay-nav-items a:hover {
     color: var(--black);
   }
   
