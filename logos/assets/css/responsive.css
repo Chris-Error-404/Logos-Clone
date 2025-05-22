@@ -131,3 +131,41 @@
         cursor: pointer;
     }
 }
+
+@media (max-width:1024px){
+    /* Overlay base */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    z-index: 1000;
+  }
+  
+  /* Show the overlay */
+  .overlay-menu.active {
+    transform: translateX(0);
+  }
+  
+  /* Inner content (optional padding) */
+  .overlay-content {
+    padding: 2rem;
+    color: var(--white);
+    height: 100%;
+    position: relative;
+  }
+  
+  /* Close icon */
+  .close-menu {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+  }
+}

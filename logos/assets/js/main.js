@@ -46,4 +46,18 @@ function updateThemeUI(theme) {
 document.querySelector('.back-to-top').addEventListener('click', function (e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+});
+
+
+//MOBILE MENU OVERLAY SCRIPT
+const menuIcon = document.querySelector('header.mobile .bx-menu');
+const overlayMenu = document.getElementById('overlayMenu');
+const closeMenu = document.getElementById('closeMenu');
+
+menuIcon.addEventListener('click', () => {
+  overlayMenu.classList.add('active');
+});
+
+closeMenu.addEventListener('click', () => {
+  overlayMenu.classList.remove('active');
+});

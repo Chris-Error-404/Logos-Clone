@@ -54,7 +54,8 @@ body.light-mode {
   body.light-mode header.desktop i,
   body.light-mode .links,
   body.light-mode .built,
-  body.light-mode header.mobile i {
+  body.light-mode header.mobile i,
+  body.light-mode a.back-to-top-mobile {
     border-color: var(--black);
   }
   
@@ -62,7 +63,8 @@ body.light-mode {
   body.light-mode a.button:hover,
   body.light-mode a.back-to-top:hover,
   body.light-mode header.desktop i:hover,
-  body.light-mode header.mobile i:hover {
+  body.light-mode header.mobile i:hover,
+  body.light-mode a.back-to-top-mobile:hover {
     background-color: var(--black);
     color: var(--white);
   }
