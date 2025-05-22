@@ -136,6 +136,8 @@ header.desktop{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 1em;
+    margin-bottom: 2em;
 }
 
 header.desktop i{
@@ -153,10 +155,8 @@ header.desktop i:hover{
 
 
 header.desktop img{
-    width: 150%;
+    width: 70px;
     cursor: pointer;
-    background-color: var(--black);
-    width: fit-content;
 }
 
 /* END DESKTOP NAVBAR*/
@@ -415,3 +415,4 @@ a.back-to-top:hover{
 
 /* end second section */
 /* END FOOTER */
+

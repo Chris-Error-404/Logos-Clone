@@ -1,30 +1,30 @@
-//WESITE THEME SCRIPT 
-  document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.getElementById('theme-toggle');
-    const body = document.body;
+//WEBSITE THEME SCRIPT 
+const toggle = document.querySelector('header.desktop i');
+const body = document.body;
 
-    // Restore saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      body.classList.add('light-mode');
-      updateIcon('light');
-    }
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  body.classList.add('light-mode');
+  updateIcon('light');
+}
 
-    // Toggle on click
-    toggle.addEventListener('click', () => {
-      const isLight = body.classList.toggle('light-mode');
-      const theme = isLight ? 'light' : 'dark';
-      localStorage.setItem('theme', theme);
-      updateIcon(theme);
-    });
+toggle.addEventListener('click', () => {
+  const isLight = body.classList.toggle('light-mode');
+  const theme = isLight ? 'light' : 'dark';
+  updateIcon(theme);
+  localStorage.setItem('theme', theme);
+});
 
-    // Optional: Keyboard toggle
-    toggle.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') toggle.click();
-    });
+function updateIcon(theme) {
+  toggle.classList.remove('bx-sun', 'bx-moon');
+  toggle.classList.add(theme === 'light' ? 'bx-sun' : 'bx-moon');
 
-    function updateIcon(theme) {
-      toggle.classList.remove('bx-sun', 'bx-moon');
-      toggle.classList.add(theme === 'light' ? 'bx-sun' : 'bx-moon');
-    }
-  });
+  // Add rotation animation
+  toggle.classList.add('theme-rotate');
+
+  // Remove animation class after it ends so it can replay next time
+  toggle.addEventListener('animationend', () => {
+    toggle.classList.remove('theme-rotate');
+  }, { once: true });
+}
