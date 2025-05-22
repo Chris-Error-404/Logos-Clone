@@ -1,11 +1,15 @@
-//WEBSITE THEME SCRIPT 
+// WEBSITE THEME SCRIPT 
 const toggle = document.getElementById('theme-toggle');
 const body = document.body;
-const logo = document.querySelector('header.desktop img');
+const desktopLogo = document.querySelector('header.desktop img');
+const mobileLogo = document.querySelector('header.mobile img');
 
-// Apply saved theme
+// Detect and apply saved or system theme
 const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
+const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+const defaultTheme = savedTheme || (prefersLight ? 'light' : 'dark');
+
+if (defaultTheme === 'light') {
   body.classList.add('light-mode');
   updateThemeUI('light');
 }
@@ -22,10 +26,13 @@ function updateThemeUI(theme) {
   toggle.classList.remove('bx-sun', 'bx-moon');
   toggle.classList.add(theme === 'light' ? 'bx-sun' : 'bx-moon');
 
-  // Switch logo
-  logo.src = theme === 'light'
+  // Switch both logos
+  const logoSrc = theme === 'light'
     ? './assets/img/logo-black.svg'
     : './assets/img/logo.svg';
+
+  if (desktopLogo) desktopLogo.src = logoSrc;
+  if (mobileLogo) mobileLogo.src = logoSrc;
 
   // Add rotation animation
   toggle.classList.add('theme-rotate');
