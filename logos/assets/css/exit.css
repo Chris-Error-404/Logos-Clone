@@ -1,3 +1,9 @@
+:root{
+    --white: #fff;
+    --black: #000;
+    --gray: #ffffff99;
+}
+
 .video-container{
     padding-top: 2em;
 }
@@ -17,3 +23,103 @@
     width: 100%;
     height: 100%;
   }
+
+.contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.contact h1{
+    font-weight: 300;
+    font-size: 1.6em;
+}
+
+.contact a{
+    font-size: 0.9em;
+    border: 1px solid var(--white);
+    padding: 0.4em 1em;
+    transition: all 0.1s ;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact a:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.discord{
+    border-top: 1px solid var(--white);
+    width: 50%;
+    padding-top: 1em;
+    min-height: 200px;
+}  
+
+.discord h1{
+    margin-bottom: 1em;
+}
+
+.newsletter{
+    border-top: 1px solid var(--white);
+    width: 50%;
+    padding-top: 1em;
+    min-height: 200px;
+} 
+
+.newsletter h1{
+    margin-bottom: 1em;
+}
+
+.newsletter form{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.newsletter input{
+    border: 1px solid var(--white);
+    padding: 0.9em 1em;
+    transition: all 0.1s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid var(--white);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 60%;
+    color: var(--white);
+}
+
+.newsletter input::placeholder{
+    font-family: 'Grotesk', sans-serif;
+    color: var(--gray);
+}
+
+@media (max-width: 1024px){
+    .contact{
+        flex-direction: column;
+    }
+
+    .discord{
+        width: 100%;
+    }
+
+    .newsletter{
+        width: 100%;
+    }
+
+    .contact h1{
+        font-weight: 300;
+        font-size: 1.4em;
+    }
+}
