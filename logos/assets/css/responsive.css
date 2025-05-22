@@ -235,7 +235,7 @@
     }
     
     .overlay-nav-items a {
-        font-size: 0.8750em;
+        font-size: 1em;
         display: block;
         color: var(--gray);
         transition: all 0.1s ease;
