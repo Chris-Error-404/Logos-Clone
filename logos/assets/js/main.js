@@ -1,8 +1,15 @@
 // WEBSITE THEME SCRIPT 
-const toggle = document.getElementById('theme-toggle');
 const body = document.body;
+
+// Logos
 const desktopLogo = document.querySelector('header.desktop img');
 const mobileLogo = document.querySelector('header.mobile img');
+const overlayLogo = document.querySelector('.overlay-menu img');
+
+// Theme toggle icons
+const desktopToggle = document.getElementById('desktop-theme-toggle');
+const mobileToggle = document.getElementById('mobile-theme-toggle');
+const overlayToggle = document.querySelector('#overlayMenu #theme-toggle');
 
 // Detect and apply saved or system theme
 const savedTheme = localStorage.getItem('theme');
@@ -14,32 +21,46 @@ if (defaultTheme === 'light') {
   updateThemeUI('light');
 }
 
-toggle.addEventListener('click', () => {
-  const isLight = body.classList.toggle('light-mode');
-  const theme = isLight ? 'light' : 'dark';
-  updateThemeUI(theme);
-  localStorage.setItem('theme', theme);
-});
+function addToggleListener(toggleBtn) {
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light-mode');
+    const theme = isLight ? 'light' : 'dark';
+    updateThemeUI(theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+
+// Attach to all toggle buttons
+addToggleListener(desktopToggle);
+addToggleListener(mobileToggle);
+addToggleListener(overlayToggle);
 
 function updateThemeUI(theme) {
-  // Switch icon
-  toggle.classList.remove('bx-sun', 'bx-moon');
-  toggle.classList.add(theme === 'light' ? 'bx-sun' : 'bx-moon');
-
-  // Switch both logos
   const logoSrc = theme === 'light'
     ? './assets/img/logo-black.svg'
     : './assets/img/logo.svg';
 
   if (desktopLogo) desktopLogo.src = logoSrc;
   if (mobileLogo) mobileLogo.src = logoSrc;
+  if (overlayLogo) overlayLogo.src = logoSrc;
 
-  // Add rotation animation
-  toggle.classList.add('theme-rotate');
-  toggle.addEventListener('animationend', () => {
-    toggle.classList.remove('theme-rotate');
-  }, { once: true });
+  // Update all toggles
+  [desktopToggle, mobileToggle, overlayToggle].forEach(toggle => {
+    if (toggle) {
+      toggle.classList.remove('bx-sun', 'bx-moon');
+      toggle.classList.add(theme === 'light' ? 'bx-sun' : 'bx-moon');
+
+      // Animate icon
+      toggle.classList.add('theme-rotate');
+      toggle.addEventListener('animationend', () => {
+        toggle.classList.remove('theme-rotate');
+      }, { once: true });
+    }
+  });
 }
+
 
 
 //BACKT TO TOP SCRIPT
