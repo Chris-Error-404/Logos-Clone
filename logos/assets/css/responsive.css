@@ -1,0 +1,133 @@
+@media (max-width: 1024px){
+    .sidebar, header.desktop{
+        display: none;
+    }
+
+    .layout{
+        width: 90%;
+        margin-top: 0em;
+    }
+    .main{
+        padding: 0em;
+    }
+    .hero{
+        width: 100%;
+    }
+
+    .button-container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    a.button{
+        width: 100%;
+        justify-content: center;
+    }
+
+    a.right{
+        justify-content: center;
+    }
+
+    .button-container i{
+        display: none;
+    }
+
+    footer{
+        width: 90%;
+    }
+
+    .links{
+        flex-direction: column;
+        gap: 2em;
+        padding-bottom: 2em;
+        padding-top: 2em;
+    }
+
+    .links li, .links ul{
+        list-style-type: none;
+        min-height: 0px;
+    }
+
+    .links ul{
+        gap: 1em;
+    }
+
+    .socials{
+        width: 100%;
+    }
+
+    .built{
+        flex-direction: column;
+        gap: 2em;
+        padding-top: 2em;
+    }
+    
+    a.back-to-top{
+        display: none;
+        min-height: 0px;
+    }
+
+    a.back-to-top-mobile{
+        border: 1px solid var(--white);
+        padding: 0.6em;
+        font-size: 0.86em;
+        display: block;
+        width: fit-content;
+    }
+
+    a.back-to-top-mobile:hover{
+        color: var(--black);
+        background-color: var(--white);
+        transition: all 0.1s ;
+    }
+
+    .flex-1{
+        width: 100%;
+        min-height: 0px;
+        gap: 1em;
+    }
+
+    .flex-2{
+        width: 100%;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    
+    .flex-2-1{
+        gap: 1em;
+    }
+    
+    .flex-2-2{
+        gap: 1em;
+    }
+
+}
+
+
+@media (max-width:1024px){
+    header.mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 1em 0em;
+    }
+
+    header.mobile i{
+        border: 1px solid var(--white);
+        padding: 0.5em;
+        cursor: pointer;
+        transition: all 0.1s;
+    }
+
+    header.mobile i:hover{
+        background-color: var(--white);
+        color: var(--black);
+    }
+
+    header.mobile img{
+        width: 100%;
+        cursor: pointer;
+    }
+}

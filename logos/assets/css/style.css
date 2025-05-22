@@ -127,7 +127,9 @@ a{
 } */
 /* END UTILITIES */
 
-
+header.mobile{
+    display: none;
+}
 
 /* DESKTOP NAVBAR */
 header.desktop{
@@ -265,6 +267,9 @@ a.button{
     display: flex;
     align-items: center;
     width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 a.button:hover{
@@ -375,6 +380,10 @@ a.back-to-top:hover{
     color: var(--black);
     background-color: var(--white);
     transition: all 0.1s ;
+}
+
+a.back-to-top-mobile{
+    display: none;
 }
 
 .flex-2{
