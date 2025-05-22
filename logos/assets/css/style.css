@@ -34,6 +34,49 @@ body{
     line-height: 1.8;
 }
 
+/* Light mode overrides */
+body.light-mode {
+    background-color: var(--white);
+    color: var(--black);
+  }
+  
+  /* Anchor text (like nav links and others) */
+  body.light-mode a,
+  body.light-mode .sidebar a,
+  body.light-mode .sidebar a.active,
+  body.light-mode .sidebar a:hover {
+    color: var(--black);
+  }
+  
+  /* Borders */
+  body.light-mode a.button,
+  body.light-mode a.back-to-top,
+  body.light-mode header.desktop i,
+  body.light-mode .links,
+  body.light-mode .built {
+    border-color: var(--black);
+  }
+  
+  /* Buttons */
+  body.light-mode a.button:hover,
+  body.light-mode a.back-to-top:hover,
+  body.light-mode header.desktop i:hover {
+    background-color: var(--black);
+    color: var(--white);
+  }
+  
+  /* Sidebar */
+  body.light-mode .sidebar {
+    background-color: var(--white);
+  }
+  
+  /* Footer links */
+  body.light-mode .links a,
+  body.light-mode .flex-2 a,
+  body.light-mode .flex-1 h2 a {
+    color: var(--black);
+  }
+
 ul,li{
     list-style-type: none;
 }
@@ -86,6 +129,40 @@ a{
 
 
 
+/* DESKTOP NAVBAR */
+header.desktop{
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.desktop i{
+    border: 1px solid var(--white);
+    padding: 0.5em;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+header.desktop i:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+
+
+header.desktop img{
+    width: 150%;
+    cursor: pointer;
+    background-color: var(--black);
+    width: fit-content;
+}
+
+/* END DESKTOP NAVBAR*/
+
+
+
 /* LAYOUT */
 /* Layout section */
 .layout {
@@ -131,6 +208,7 @@ max-width: 1200px;
 
 .sidebar a.active{
     color: var(--white);
+    text-decoration: underline 1px solid var(--black);
 }
 
 .sidebar a:hover {
@@ -231,6 +309,7 @@ footer h2{
 
 .links li, .links ul{
     list-style-type: disc;
+    word-break: break-all;
 }
 
 .links li.start{
@@ -239,8 +318,13 @@ footer h2{
 
 .links ul{
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
 }
+
+/* .links li{
+    flex: 1 1 100%;
+} */
 
 .links a{
     text-decoration: underline;
