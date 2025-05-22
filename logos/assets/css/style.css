@@ -177,7 +177,7 @@ a.button{
     font-size: 0.9em;
     border: 1px solid var(--white);
     padding: 0.4em 1em;
-    transition: all 0.1s ease;
+    transition: all 0.1s ;
     display: flex;
     align-items: center;
     width: 50%;
@@ -204,6 +204,12 @@ i.right{
 
 
 /* FOOTER */
+
+li.start{
+    list-style-type: none;
+}
+
+/* first section */
 .links{
     border-top: 1px solid var(--white);
     min-height: 200px;
@@ -222,10 +228,6 @@ i.right{
     margin-left: 1em;
 }
 
-.links li.start{
-    list-style-type: none;
-}
-
 .links ul{
     display: flex;
     gap: 1em;
@@ -241,21 +243,46 @@ i.right{
     flex-direction: column;
     gap: 0.5em;
 }
+/* end first section */
 
 
+/* section section */
 .built{
     border-top: 1px solid var(--white);
     min-height: 200px;
     padding-top: 1em;
+    margin-bottom: 2em;
 }
 
-.built h2{
+.flex-1{
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-1 h2{
     font-weight: normal;
     font-size: 0.86em;
 }
 
-.built h2 a{
+.flex-1 h2 a{
     text-decoration: underline;
     cursor: pointer;
 }
+
+a.back-to-top{
+    border: 1px solid var(--white);
+    padding: 0.6em;
+    font-size: 0.86em;
+    display: block;
+    width: fit-content;
+}
+
+a.back-to-top:hover{
+    color: var(--black);
+    background-color: var(--white);
+    transition: all 0.1s ;
+}
+/* end second section */
 /* END FOOTER */
