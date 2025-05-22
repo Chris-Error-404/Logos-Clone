@@ -22,12 +22,16 @@ html{
 }
 
 body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: var(--black);
     color: var(--white);
     font-family: 'Grotesk', sans-serif;
     line-height: 1.8;
-    padding-left: 8em;
-    padding-right: 8em;
 }
 
 ul,li{
@@ -88,6 +92,8 @@ a{
 display: flex;
 align-items: flex-start;
 margin-bottom: 6em;
+width: 85%;
+max-width: 1200px;
 }
 
 /* Sidebar: sticky within section */
@@ -204,8 +210,10 @@ i.right{
 
 
 /* FOOTER */
+
 footer{
-    max-width: 1400px;
+    width: 85%;
+    max-width: 1200px;
 }
 
 footer h2{
