@@ -53,14 +53,16 @@ body.light-mode {
   body.light-mode a.back-to-top,
   body.light-mode header.desktop i,
   body.light-mode .links,
-  body.light-mode .built {
+  body.light-mode .built,
+  body.light-mode header.mobile i {
     border-color: var(--black);
   }
   
   /* Buttons */
   body.light-mode a.button:hover,
   body.light-mode a.back-to-top:hover,
-  body.light-mode header.desktop i:hover, body.light-mode header.mobile i:hover {
+  body.light-mode header.desktop i:hover,
+  body.light-mode header.mobile i:hover {
     background-color: var(--black);
     color: var(--white);
   }
