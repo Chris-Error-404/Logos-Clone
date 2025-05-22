@@ -56,8 +56,10 @@ const closeMenu = document.getElementById('closeMenu');
 
 menuIcon.addEventListener('click', () => {
   overlayMenu.classList.add('active');
+  document.body.classList.add('lock-scroll');
 });
 
 closeMenu.addEventListener('click', () => {
   overlayMenu.classList.remove('active');
+  document.body.classList.remove('lock-scroll');
 });
