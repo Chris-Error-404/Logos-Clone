@@ -223,8 +223,30 @@
     .overlay-nav-items{
         color: var(--gray);
     }
-
+    .overlay-nav-items ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+    }
+    
+    
+    .overlay-nav-items li.gap {
+        margin-bottom: 0.85em;
+    }
+    
+    .overlay-nav-items a {
+        font-size: 0.8750em;
+        display: block;
+        color: var(--gray);
+        transition: all 0.1s ease;
+    }
+    
     .overlay-nav-items a.active{
         color: var(--white);
+        text-decoration: underline 1px solid var(--black);
+    }
+    
+    .overlay-nav-items a:hover {
+    color: var(--white);
     }
 }
