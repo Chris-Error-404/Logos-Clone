@@ -204,11 +204,14 @@ i.right{
 
 
 /* FOOTER */
-
-li.start{
-    list-style-type: none;
+footer{
+    max-width: 1400px;
 }
 
+footer h2{
+    font-weight: normal;
+    font-size: 0.86em;
+}
 /* first section */
 .links{
     border-top: 1px solid var(--white);
@@ -218,19 +221,17 @@ li.start{
     justify-content: space-between;
 }
 
-.links h2{
-    font-weight: normal;
-    font-size: 0.86em;
-}
-
 .links li, .links ul{
     list-style-type: disc;
-    margin-left: 1em;
+}
+
+.links li.start{
+    list-style-type: none;
 }
 
 .links ul{
     display: flex;
-    gap: 1em;
+    gap: 2em;
 }
 
 .links a{
@@ -242,6 +243,7 @@ li.start{
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    width: 60%;
 }
 /* end first section */
 
@@ -252,6 +254,8 @@ li.start{
     min-height: 200px;
     padding-top: 1em;
     margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .flex-1{
@@ -259,11 +263,7 @@ li.start{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.flex-1 h2{
-    font-weight: normal;
-    font-size: 0.86em;
+    width: 40%;
 }
 
 .flex-1 h2 a{
@@ -284,5 +284,42 @@ a.back-to-top:hover{
     background-color: var(--white);
     transition: all 0.1s ;
 }
+
+.flex-2{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-2 li, .flex-2 ul{
+    list-style-type: disc;
+}
+
+.flex-2 li.start{
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.flex-2 ul{
+    display: flex;
+    gap: 2em;
+}
+
+.flex-2 a{
+    text-decoration: underline;
+    font-size: 0.86em;
+}
+
+.flex-2-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.flex-2-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* end second section */
 /* END FOOTER */
