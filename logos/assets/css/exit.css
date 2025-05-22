@@ -4,6 +4,28 @@
     --gray: #ffffff99;
 }
 
+/* ligtht mode override */
+body.light-mode .contact a,
+body.light-mode .discord,
+body.light-mode .newsletter,
+body.light-mode .newsletter input{
+    border-color:var(--black);
+}
+body.light-mode .contact a:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+body.light-mode .newsletter input{
+    color: var(--black);
+}
+
+body.light-mode .newsletter input::placeholder{
+    color: var(--black);
+}
+
+
+
 .video-container{
     padding-top: 2em;
 }
