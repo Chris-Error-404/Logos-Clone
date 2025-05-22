@@ -249,5 +249,6 @@
     
     .overlay-nav-items a:hover {
     color: var(--white);
+    text-decoration: underline 1px solid var(--black);
     }
 }
