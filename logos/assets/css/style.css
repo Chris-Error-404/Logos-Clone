@@ -57,7 +57,8 @@ body.light-mode {
   body.light-mode a,
   body.light-mode .sidebar a,
   body.light-mode .sidebar a.active,
-  body.light-mode .sidebar a:hover {
+  body.light-mode .sidebar a:hover,
+  body.light-mode .overlay-nav-items a.active {
     color: var(--black);
   }
   
