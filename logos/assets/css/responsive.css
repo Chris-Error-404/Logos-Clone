@@ -93,7 +93,14 @@
         gap: 1em;
     }
 
-    
+    .flex-2 li, .flex-2 ul{
+        list-style-type: none;
+    }
+
+    .flex-2 ul{
+        gap: 1em;
+    }
+
     .flex-2-1{
         gap: 1em;
     }
