@@ -1,3 +1,11 @@
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --gray: #ffffff99;
+}
+
+
 @media (max-width: 1024px){
     .sidebar, header.desktop{
         display: none;
@@ -205,9 +213,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 2em;
     }
 
     .overlay-btn-container{
         display: flex;
+    }
+
+    .overlay-nav-items{
+        color: var(--gray);
+    }
+
+    .overlay-nav-items a.active{
+        color: var(--white);
     }
 }
