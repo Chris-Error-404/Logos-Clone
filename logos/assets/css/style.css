@@ -60,7 +60,7 @@ body.light-mode {
   /* Buttons */
   body.light-mode a.button:hover,
   body.light-mode a.back-to-top:hover,
-  body.light-mode header.desktop i:hover {
+  body.light-mode header.desktop i:hover, body.light-mode header.mobile i:hover {
     background-color: var(--black);
     color: var(--white);
   }
