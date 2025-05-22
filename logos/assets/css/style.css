@@ -39,6 +39,19 @@ body.light-mode {
     background-color: var(--white);
     color: var(--black);
   }
+
+  /* Overlay */
+  body.light-mode .overlay-menu{
+    background-color: var(--white);
+  }
+
+  body.light-mode .overlay-content,
+  body.light-mode .close-menu,
+  body.light-mode .overlay-menu i {
+    color: var(--black);
+  }
+
+
   
   /* Anchor text (like nav links and others) */
   body.light-mode a,
@@ -55,7 +68,8 @@ body.light-mode {
   body.light-mode .links,
   body.light-mode .built,
   body.light-mode header.mobile i,
-  body.light-mode a.back-to-top-mobile {
+  body.light-mode a.back-to-top-mobile,
+  body.light-mode .overlay-menu i {
     border-color: var(--black);
   }
   
@@ -64,7 +78,8 @@ body.light-mode {
   body.light-mode a.back-to-top:hover,
   body.light-mode header.desktop i:hover,
   body.light-mode header.mobile i:hover,
-  body.light-mode a.back-to-top-mobile:hover {
+  body.light-mode a.back-to-top-mobile:hover,
+  body.light-mode .overlay-menu i:hover {
     background-color: var(--black);
     color: var(--white);
   }
@@ -131,9 +146,17 @@ a{
 } */
 /* END UTILITIES */
 
+
+/* MOBILE  NAVBAR */
 header.mobile{
     display: none;
 }
+
+.overlay-menu{
+    display: none;
+}
+
+/* END MOBILE NAVBAR */
 
 /* DESKTOP NAVBAR */
 header.desktop{
@@ -147,6 +170,7 @@ header.desktop{
 
 header.desktop i{
     border: 1px solid var(--white);
+    font-size: 1em;
     padding: 0.5em;
     cursor: pointer;
     transition: all 0.1s;
