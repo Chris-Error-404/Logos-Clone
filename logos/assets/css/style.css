@@ -293,6 +293,11 @@ padding-top: 1em;
     margin-top: 1em;
 }
 
+.hero-img-container img{
+    width: 50%;
+    height: auto;
+}
+
 .subscribe{
     border-top: 1px solid var(--white);
     padding-top: 1em;
@@ -330,6 +335,12 @@ padding-top: 1em;
     color: var(--white);
     outline: none;
     cursor: pointer;
+}
+
+.subscribe button:hover{
+    background-color: var(--white);
+    color: var(--black);
+    transition: all 0.1s ;
 }
 
 .subscribe input{
