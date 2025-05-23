@@ -24,10 +24,28 @@
 
     .hero-img-container{
         flex-direction: column;
+        align-items: start;
+        text-align: left;
+        gap: 2em;
+        margin-bottom: 1em;
     }
 
     .hero-img-container img{
-        width: 90%;
+        width: 100%;
+    }
+
+
+    .subscribe form{
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .subscribe input{
+        width: 100%;
+    }
+    
+    .subscribe button{
+        width: 100%;
     }
 
     .button-container{
