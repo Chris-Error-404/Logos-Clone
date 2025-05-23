@@ -285,6 +285,85 @@ padding-top: 1em;
     color: var(--white);
     line-height: 1em;
 }
+
+.hero-img-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.subscribe{
+    border-top: 1px solid var(--white);
+    padding-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.subscribe h2{
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+.subscribe form{
+    display: flex;
+}
+.subscribe input{
+    width: 80%;
+}
+
+.subscribe button{
+    font-size: 0.9em;
+    border: 1px solid var(--white);
+    padding: 0.8em 1em;
+    transition: all 0.1s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    color: var(--white);
+    outline: none;
+    cursor: pointer;
+}
+
+.subscribe input{
+    border: 1px solid var(--white);
+    padding: 0.9em 1em;
+    transition: all 0.1s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid var(--white);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 80%;
+    color: var(--white);
+}
+
+
+.subscribe input::placeholder{
+    font-family: 'Grotesk', sans-serif;
+    color: var(--gray);
+}
+
+.hero-img-container h4{
+    font-weight: 400;
+}
+
+.hero-img-container img{
+    width: 50%;
+    height: auto;
+}
+
 .button-container{
     display: flex;
     gap: 1em;
