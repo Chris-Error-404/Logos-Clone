@@ -54,3 +54,27 @@ Contributions, suggestions, and feedback are welcome!
 5. 🔃 Open a Pull Request  
 
 Or simply open an issue to start a discussion.
+
+## 📁 Getting Started
+
+To run this project locally, follow these steps:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/yourusername/logos-clone.git
+
+# 2. Navigate into the project directory
+cd logos-clone
+
+# 3. Open index.html directly in your browser
+#    Or use a local server:
+
+# Option A: http-server (Node.js)
+npm install -g http-server
+http-server
+
+# Option B: Python 3
+python -m http.server
+
+# Option C: Python 2
+python -m SimpleHTTPServer
